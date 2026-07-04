@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "landing",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd '/private/tmp/claude-501/-Users-ievgeniilebid-Library-Mobile-Documents-com-apple-CloudDocs-work-CarryApps-Web-Sites-Landing-GlobeTempusPlus/897e8011-900b-4206-8e21-20bb8efe88e1/scratchpad/site' && exec python3 -m http.server 8080"],
+      "port": 8080
+    }
+  ]
+}
