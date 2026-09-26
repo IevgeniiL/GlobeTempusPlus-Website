@@ -1,16 +1,16 @@
-const CACHE = 'tempus-v4';
+const CACHE = 'tempus-v5';
 /* Resolve paths relative to this script so GitHub Pages project URLs (/repo/) work. */
 const base = new URL('./', self.location.href).href;
 const ASSETS = [
   base,
   new URL('index.html', base).href,
-  new URL('images/hero-phone.png', base).href,
-  new URL('images/3_2_iPhoneX_3_Cities.png', base).href,
-  new URL('images/4_2_iPhoneX_Location_Active_Time.png', base).href,
-  new URL('images/3_8_iPhoneX_Edit_List.png', base).href,
-  new URL('images/3_4_iPhoneX_Calendar_View.png', base).href,
-  new URL('images/3_7_iPhoneX_Compact_and_Standard_View.png', base).href,
-  new URL('images/3_10_iPhoneX_Add_New_Location.png', base).href,
+  new URL('images/screens/01-main.png', base).href,
+  new URL('images/screens/02-compact.png', base).href,
+  new URL('images/screens/03-add-location.png', base).href,
+  new URL('images/screens/04-edit-list.png', base).href,
+  new URL('images/screens/05-availability.png', base).href,
+  new URL('images/screens/06-swipe-actions.png', base).href,
+  new URL('images/screens/07-day-agenda.png', base).href,
 ];
 
 self.addEventListener('install', e => {
