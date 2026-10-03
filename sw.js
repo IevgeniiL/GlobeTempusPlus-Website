@@ -1,4 +1,4 @@
-const CACHE = 'tempus-v6';
+const CACHE = 'tempus-v7';
 /* Resolve paths relative to this script so GitHub Pages project URLs (/repo/) work. */
 const base = new URL('./', self.location.href).href;
 const ASSETS = [
@@ -11,6 +11,7 @@ const ASSETS = [
   new URL('images/screens/05-availability.png', base).href,
   new URL('images/screens/06-swipe-actions.png', base).href,
   new URL('images/screens/07-day-agenda.png', base).href,
+  new URL('images/mac/menu-bar.png', base).href,
 ];
 
 self.addEventListener('install', e => {

@@ -4,7 +4,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Project Overview
 
-Static marketing landing page for **GlobeTempus+** (also branded as **Tempus+**), a time zone converter iOS app by CarryApps. Deployed to `carryapps.com` via GitHub Pages (CNAME file). No build step — the entire site is a single `index.html` with inline CSS and JS, plus `sw.js` for PWA caching.
+Static marketing landing page for **GlobeTempus+** (also branded as **Tempus+**), a time zone converter app for iPhone, iPad and Mac by CarryApps. Deployed to `carryapps.com` via GitHub Pages (CNAME file). No build step — the entire site is a single `index.html` with inline CSS and JS, plus `sw.js` for PWA caching.
 
 ## Development
 
@@ -32,6 +32,7 @@ and add/remove URLs from the `ASSETS` array.
 - `nav` — fixed, blurred backdrop, App Store badge link
 - `#top / .hero` — animated gradient background, headline, hero phone image
 - `#screens / .showcase` — horizontal scrolling app screenshot carousel
+- `#mac` — "Now on Mac" feature callout (`images/mac/menu-bar.png`, made from the iOS repo's Mac window capture)
 - `#availability` — "Available now" feature callout
 - Feature callouts (time picker, edit list) — full-bleed alternating layout sections
 - `#features / .grid-section` — feature grid cards
