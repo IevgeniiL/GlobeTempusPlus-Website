@@ -913,7 +913,7 @@
 <body>
 
 <!-- NAV -->
-<nav aria-label="Primary">
+<nav data-overplay-anchor="nav" aria-label="Primary">
   <a href="#top" class="logo">GlobeTempus<sup>+</sup></a>
   <a href="https://apps.apple.com/app/id6813428126" class="nav-cta-mobile" aria-label="Get GlobeTempus+ on the App Store">Get the App</a>
   <ul>
@@ -929,7 +929,7 @@
 <main id="top" tabindex="-1">
 
 <!-- HERO -->
-<section class="hero">
+<section data-overplay-anchor="hero" class="hero">
   <div class="hero-bg" aria-hidden="true">
     <div class="hero-bg-gradient">
       <div class="hero-bg-gradient-fill" aria-hidden="true"></div>
@@ -958,7 +958,7 @@
   </div>
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <div class="hero-text">
+    <div data-overplay-anchor="hero:text" class="hero-text">
       <div class="eyebrow">World Clock &amp; Meeting Planner</div>
       <h1>Every<br/>timezone,<br/><em>at a glance.</em></h1>
       <p class="lead">
@@ -972,29 +972,29 @@
       </div>
       <p class="hero-platform">Built for iPhone, iPad and Mac — your cities sync through iCloud, and one purchase unlocks every device.</p>
     </div>
-    <div class="hero-phone" data-animate data-delay="2">
+    <div data-overplay-anchor="hero:phone" class="hero-phone" data-animate data-delay="2">
       <img src="images/screens/01-main.png" alt="GlobeTempus+ main screen: My Location (active), Brad's Team, Austin (soon) and CET / WEST" />
     </div>
   </div>
 </section>
 
 <!-- SCREENS SHOWCASE -->
-<section class="showcase" id="screens">
+<section data-overplay-anchor="screens" class="showcase" id="screens">
   <div class="showcase-label container" data-animate>
     <div class="eyebrow">The App</div>
     <h2>Built for distributed teams.</h2>
     <p class="lead">Every card shows the local time, day or night, and whether that person is available right now.</p>
   </div>
   <div class="screens-row">
-    <div class="screen-item side" data-animate>
+    <div data-overplay-anchor="screens:add-location" class="screen-item side" data-animate>
       <img src="images/screens/03-add-location.png" alt="Searching for a city to add" />
       <span class="screen-cap">Add any city</span>
     </div>
-    <div class="screen-item main" data-animate data-delay="2">
+    <div data-overplay-anchor="screens:cities" class="screen-item main" data-animate data-delay="2">
       <img src="images/screens/02-cities.png" alt="Clocks for My Location, Brad's Team and Austin with day and night city skylines" />
       <span class="screen-cap">Everyone at a glance</span>
     </div>
-    <div class="screen-item side" data-animate data-delay="3">
+    <div data-overplay-anchor="screens:edit-list" class="screen-item side" data-animate data-delay="3">
       <img src="images/screens/04-edit-list.png" alt="Edit Location List with four locations" />
       <span class="screen-cap">Edit &amp; reorder</span>
     </div>
@@ -1004,7 +1004,7 @@
 <hr class="divider" />
 
 <!-- FEATURE: MAC -->
-<div id="mac" style="background: var(--bg-2);">
+<div data-overplay-anchor="feature:mac" id="mac" style="background: var(--bg-2);">
   <div class="feature-row reverse">
     <div class="feature-text">
       <div class="eyebrow" data-animate>Now on Mac</div>
@@ -1029,7 +1029,7 @@
 <hr class="divider" />
 
 <!-- FEATURE: AVAILABILITY -->
-<div id="availability">
+<div data-overplay-anchor="feature:availability" id="availability">
   <div class="feature-row">
     <div class="feature-text">
       <div class="eyebrow" data-animate>Availability</div>
@@ -1054,7 +1054,7 @@
 <hr class="divider" />
 
 <!-- FEATURE: HOLIDAYS -->
-<div id="holidays" style="background: var(--bg-2);">
+<div data-overplay-anchor="feature:holidays" id="holidays" style="background: var(--bg-2);">
   <div class="feature-row reverse">
     <div class="feature-text">
       <div class="eyebrow" data-animate>Holidays</div>
@@ -1081,7 +1081,7 @@
 <hr class="divider" />
 
 <!-- FEATURE: TIME PICKER -->
-<div id="calendar">
+<div data-overplay-anchor="feature:calendar" id="calendar">
   <div class="feature-row">
     <div class="feature-text">
       <div class="eyebrow" data-animate>Calendar</div>
@@ -1106,7 +1106,7 @@
 <hr class="divider" />
 
 <!-- FEATURE: EDIT LIST -->
-<div style="background: var(--bg-2);">
+<div data-overplay-anchor="feature:edit-list" style="background: var(--bg-2);">
   <div class="feature-row reverse">
     <div class="feature-text">
       <div class="eyebrow" data-animate>Organisation</div>
@@ -1129,14 +1129,14 @@
 </div>
 
 <!-- FEATURES GRID -->
-<section class="grid-section" id="features">
+<section data-overplay-anchor="features" class="grid-section" id="features">
   <div class="grid-inner">
     <div class="grid-header" data-animate>
       <div class="eyebrow">Everything included</div>
       <h2>Thoughtfully designed,<br/>deeply useful.</h2>
     </div>
     <div class="features-grid">
-      <div class="feat-card" data-animate>
+      <div data-overplay-anchor="features:live-clocks" class="feat-card" data-animate>
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
@@ -1145,7 +1145,7 @@
         <h3>Live World Clocks</h3>
         <p>Cards switch between day and night styling automatically, so you see at a glance who's likely awake.</p>
       </div>
-      <div class="feat-card" data-animate data-delay="1">
+      <div data-overplay-anchor="features:city-illustrations" class="feat-card" data-animate data-delay="1">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
@@ -1155,7 +1155,7 @@
         <h3>City Illustrations</h3>
         <p>78 hand-drawn skylines, from Berlin's Brandenburg Gate to Austin's Capitol, lit for day or night.</p>
       </div>
-      <div class="feat-card" data-animate data-delay="2">
+      <div data-overplay-anchor="features:timeline" class="feat-card" data-animate data-delay="2">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -1167,7 +1167,7 @@
         <h3>Timeline Scrubber</h3>
         <p>Swipe through any day, past or future, across every timezone at once. Tap Current Time to jump back to now.</p>
       </div>
-      <div class="feat-card" data-animate data-delay="3">
+      <div data-overplay-anchor="features:create-events" class="feat-card" data-animate data-delay="3">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="4" width="18" height="18" rx="2"/>
@@ -1179,7 +1179,7 @@
         <h3>Create Events</h3>
         <p>Found a time that works? Turn it into a calendar event straight from your world clock.</p>
       </div>
-      <div class="feat-card" data-animate data-delay="4">
+      <div data-overplay-anchor="features:team-labels" class="feat-card" data-animate data-delay="4">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -1190,7 +1190,7 @@
         <h3>Team Labels</h3>
         <p>Group timezones under meaningful names — "Brad's Team", "Austin Office" — not just raw city names.</p>
       </div>
-      <div class="feat-card" data-animate data-delay="5">
+      <div data-overplay-anchor="features:privacy" class="feat-card" data-animate data-delay="5">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="5" y="2" width="14" height="20" rx="2"/>
@@ -1205,24 +1205,24 @@
 </section>
 
 <!-- HOW IT WORKS -->
-<section>
+<section data-overplay-anchor="how">
   <div class="how-section">
     <div class="how-header" data-animate>
       <div class="eyebrow">How it works</div>
       <h2>Up in seconds.</h2>
     </div>
     <div class="steps">
-      <div class="step">
+      <div data-overplay-anchor="how:step-1" class="step">
         <div class="step-num" data-animate>1</div>
         <h3>Add locations</h3>
         <p>Tap <strong>+</strong> to add any city or timezone, then give it a name that makes sense — a teammate, a team, an office.</p>
       </div>
-      <div class="step">
+      <div data-overplay-anchor="how:step-2" class="step">
         <div class="step-num" data-animate data-delay="2">2</div>
         <h3>Set availability</h3>
         <p>Tap a location to choose its working days and hours. Badges show who's active now.</p>
       </div>
-      <div class="step">
+      <div data-overplay-anchor="how:step-3" class="step">
         <div class="step-num" data-animate data-delay="4">3</div>
         <h3>Find the overlap</h3>
         <p>Swipe the timeline to compare times with your calendar, then create the event right there.</p>
@@ -1232,8 +1232,8 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section" id="download">
-  <div class="cta-inner" data-animate>
+<section data-overplay-anchor="download" class="cta-section" id="download">
+  <div data-overplay-anchor="download:card" class="cta-inner" data-animate>
     <div class="eyebrow eyebrow--center">Free to Try</div>
     <h2>Stop doing the<br/>timezone math.</h2>
     <p class="lead">
@@ -1242,15 +1242,15 @@
       purchase covers iPhone, iPad and Mac.
     </p>
     <div class="cta-badges">
-      <div class="badge-item">
+      <div data-overplay-anchor="download:free" class="badge-item">
         <span class="badge-num accent">Free</span>
         <span class="badge-label">To download</span>
       </div>
-      <div class="badge-item">
+      <div data-overplay-anchor="download:trial" class="badge-item">
         <span class="badge-num">1 week</span>
         <span class="badge-label">Free trial, yearly plan</span>
       </div>
-      <div class="badge-item">
+      <div data-overplay-anchor="download:lifetime" class="badge-item">
         <span class="badge-num">Lifetime</span>
         <span class="badge-label">One-time purchase option</span>
       </div>
@@ -1266,9 +1266,9 @@
 </main>
 
 <!-- FOOTER -->
-<footer>
+<footer data-overplay-anchor="footer">
   <div class="footer-logo">GlobeTempus<sup>+</sup></div>
-  <a href="mailto:support@carryapps.com" class="footer-contact">
+  <a href="mailto:support@carryapps.com" class="footer-contact" data-overplay-anchor="footer:contact">
     <span class="footer-contact-label">Contact us</span>
     <span class="footer-contact-email">support@carryapps.com</span>
   </a>
@@ -1434,5 +1434,12 @@
 })();
 </script>
 
+<script src="https://overplay.app/widget.js"></script>
+<script>
+  Overplay.init({
+    serverUrl: 'https://overplay.app',
+    projectId: 'ab2b7363-c9a4-419c-ab72-155cb5295867'
+  });
+</script>
 </body>
 </html>
