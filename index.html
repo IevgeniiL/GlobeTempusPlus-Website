@@ -472,6 +472,8 @@
     .feature-text h2 { margin-bottom: 20px; }
     .feature-text .lead { margin-bottom: 36px; }
     .feature-visual { flex: 0 0 304px; }
+    .feature-visual.wide { flex: 0 0 520px; }
+    .feature-visual.wide img { border-radius: 28px; }
     .feature-visual img {
       width: 100%;
       display: block;
@@ -699,6 +701,7 @@
         justify-content: center;
       }
       .feature-visual img { width: min(304px, 100%); margin: 0; }
+      .feature-visual.wide img { width: min(560px, 100%); }
       .grid-section { padding: 72px var(--section-pad-x); }
       .features-grid { grid-template-columns: 1fr; }
       .how-section { padding: 72px var(--section-pad-x); }
@@ -918,6 +921,8 @@
   <a href="https://apps.apple.com/app/id6813428126" class="nav-cta-mobile" aria-label="Get GlobeTempus+ on the App Store">Get the App</a>
   <ul>
     <li><a href="#screens">Screens</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#duo">iPhone Duo</a></li>
     <li><a href="#mac">Mac</a></li>
     <li><a href="#holidays">Holidays</a></li>
     <li><a href="#calendar">Calendar</a></li>
@@ -1002,6 +1007,56 @@
 </section>
 
 <hr class="divider" />
+
+<!-- FEATURE: PEOPLE -->
+<div data-overplay-anchor="feature:people" id="people">
+  <div class="feature-row">
+    <div class="feature-text">
+      <div class="eyebrow" data-animate>New &middot; People</div>
+      <h2>See when<br/>they're<br/><span class="accent">free.</span></h2>
+      <p class="lead">
+        Invite a colleague, client or friend by email or message. Once they
+        accept, you both see each other's busy time right on their city card
+        &mdash; only busy blocks, never event titles. It runs on iCloud, with
+        no account and no server of ours. Your first person is free, and
+        either of you can stop at any time.
+      </p>
+      <div class="feature-pills">
+        <span class="pill"><span class="pill-dot"></span>Busy time, never titles</span>
+        <span class="pill"><span class="pill-dot"></span>Their city, if they share it</span>
+        <span class="pill"><span class="pill-dot"></span>First person free</span>
+      </div>
+    </div>
+    <div class="feature-visual">
+      <img src="images/screens/10-people.png" alt="Kate in London, marked BUSY with her busy time for the day, under My Location" />
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- FEATURE: IPHONE DUO -->
+<div data-overplay-anchor="feature:duo" id="duo" style="background: var(--bg-2);">
+  <div class="feature-row reverse">
+    <div class="feature-text">
+      <div class="eyebrow" data-animate>New &middot; iPhone Duo</div>
+      <h2>Unfold.<br/>Every clock<br/><span class="accent">fits.</span></h2>
+      <p class="lead">
+        On the unfolded iPhone Duo your locations and people spread into two
+        columns, packed without gaps, with the whole day on one timeline.
+        Fold it, and everything fits the outer display.
+      </p>
+      <div class="feature-pills">
+        <span class="pill"><span class="pill-dot"></span>Two columns unfolded</span>
+        <span class="pill"><span class="pill-dot"></span>Centred dialogs</span>
+        <span class="pill"><span class="pill-dot"></span>Folds with you</span>
+      </div>
+    </div>
+    <div class="feature-visual wide">
+      <img src="images/screens/duo-unfolded.png" alt="GlobeTempus+ on an unfolded iPhone Duo: two columns of clocks with Kate's busy time and a long timeline" />
+    </div>
+  </div>
+</div>
 
 <!-- FEATURE: MAC -->
 <div data-overplay-anchor="feature:mac" id="mac" style="background: var(--bg-2);">
