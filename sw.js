@@ -1,4 +1,4 @@
-const CACHE = 'tempus-v13';
+const CACHE = 'tempus-v14';
 /* Resolve paths relative to this script so GitHub Pages project URLs (/repo/) work. */
 const base = new URL('./', self.location.href).href;
 const ASSETS = [
@@ -12,6 +12,7 @@ const ASSETS = [
   new URL('images/screens/06-swipe-actions.png', base).href,
   new URL('images/screens/07-calendar.png', base).href,
   new URL('images/screens/08-holiday.png', base).href,
+  new URL('images/screens/12-alarm.png', base).href,
   new URL('images/mac/menu-bar.png', base).href,
 ];
 
