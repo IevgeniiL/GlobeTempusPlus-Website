@@ -577,6 +577,60 @@
     }
     .step p { font-size: 15px; line-height: 1.6; color: var(--muted); }
 
+    /* ── FAQ ── */
+    .faq-section {
+      background: var(--bg-2);
+      padding: 100px var(--section-pad-x);
+    }
+    .faq-inner {
+      max-width: 1120px; margin: 0 auto;
+      display: grid; grid-template-columns: 360px 1fr;
+      gap: 64px; align-items: start;
+    }
+    .faq-header { position: sticky; top: calc(var(--nav-h) + 40px); }
+    .faq-list { border-top: 1px solid var(--border); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; padding: 24px 0;
+      cursor: pointer; list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary h3 {
+      margin: 0; font-size: 18px;
+      transition: color 0.18s;
+    }
+    .faq-item summary:hover h3 { color: var(--accent); }
+    .faq-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+    .faq-icon {
+      position: relative; flex-shrink: 0;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent-dim);
+      transition: transform 0.25s ease;
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: ''; position: absolute; left: 50%; top: 50%;
+      width: 12px; height: 2px; border-radius: 1px;
+      background: var(--accent);
+      transform: translate(-50%, -50%);
+    }
+    .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-item p {
+      font-size: 16px; line-height: 1.65; color: var(--muted);
+      max-width: 640px; padding: 0 52px 28px 0;
+    }
+    @media (max-width: 960px) {
+      .faq-section { padding: 72px var(--section-pad-x); }
+      .faq-inner { grid-template-columns: 1fr; gap: 36px; }
+      .faq-header { position: static; }
+      .faq-item summary h3 { font-size: 17px; }
+      .faq-item p { padding-right: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .faq-icon { transition: none; }
+    }
+
     /* ── CTA ── */
     .cta-section {
       padding: 32px var(--section-pad-x) 120px;
@@ -912,6 +966,103 @@
       .hero-actions .app-store-badge { animation: none !important; filter: none; }
     }
   </style>
+  <link rel="canonical" href="https://carryapps.com/" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GlobeTempus+",
+  "alternateName": "GlobeTempus Plus",
+  "description": "World clock and meeting planner for iPhone, iPad and Mac. Every time zone and your calendar on one timeline, working hours and public holidays per location, Mac menu bar app and widgets.",
+  "operatingSystem": "iOS, iPadOS, macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "url": "https://carryapps.com/",
+  "downloadUrl": "https://apps.apple.com/app/id6813428126",
+  "installUrl": "https://apps.apple.com/app/id6813428126",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CarryApps",
+    "url": "https://carryapps.com/"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is GlobeTempus+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GlobeTempus+ is a world clock and meeting planner for iPhone, iPad and Mac. It shows every city you care about on one timeline, together with your calendar, each location's working hours and its public holidays, so you can see at a glance who is at work, off or asleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find a meeting time across several time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the cities or teammates you work with, set their working hours once, then swipe the timeline. Every clock moves together, your calendar events sit on the same timeline, and when you find a slot that works for everyone you can create the event right there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see when my colleagues are working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Give each location its working days and hours, and a live badge shows who is ACTIVE now or available SOON. With People, colleagues who accept your invitation share their busy time on their city card: only busy blocks, never event titles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it handle daylight saving time and public holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Clock changes are applied automatically on both sides, so times stay correct when any city switches to or from daylight saving time. A HOLIDAY badge marks cities on a public holiday, with upcoming holidays for 240+ countries, including regional holidays in Germany, the US, Canada and Australia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a Mac app and widgets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On Mac, GlobeTempus+ lives in the menu bar (macOS 27 or later on Apple silicon) and syncs your locations with iPhone and iPad via iCloud. On iPhone and iPad there are Home Screen and Lock Screen widgets for your world clocks, a single city, and the time difference between two cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is it different from the built-in Clock app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Clock app lists the current time in a few cities. GlobeTempus+ is built for planning: one timeline you can move through any day, working hours and holidays per location, your calendar next to every clock, shared busy time with people you invite, and alarms that ring at a time in another city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GlobeTempus+ free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is free to download and includes two locations, three people and one alarm. Upgrade monthly, yearly (with a one-week free trial) or with a one-time lifetime purchase to unlock unlimited locations, people and alarms, plus event details and event creation. One purchase covers iPhone, iPad and Mac."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account? What happens to my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No account and no sign-up. Your locations stay on your devices and sync through your own iCloud, your calendar never leaves your devices, and the clocks work offline."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -1313,6 +1464,50 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section data-overplay-anchor="faq" class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header" data-animate>
+      <div class="eyebrow">FAQ</div>
+      <h2>Questions,<br/><span class="accent">answered.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details data-overplay-anchor="faq:q1" class="faq-item">
+        <summary><h3>What is GlobeTempus+?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>GlobeTempus+ is a world clock and meeting planner for iPhone, iPad and Mac. It shows every city you care about on one timeline, together with your calendar, each location's working hours and its public holidays, so you can see at a glance who is at work, off or asleep.</p>
+      </details>
+      <details data-overplay-anchor="faq:q2" class="faq-item">
+        <summary><h3>How do I find a meeting time across several time zones?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Add the cities or teammates you work with, set their working hours once, then swipe the timeline. Every clock moves together, your calendar events sit on the same timeline, and when you find a slot that works for everyone you can create the event right there.</p>
+      </details>
+      <details data-overplay-anchor="faq:q3" class="faq-item">
+        <summary><h3>Can I see when my colleagues are working?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Yes. Give each location its working days and hours, and a live badge shows who is ACTIVE now or available SOON. With People, colleagues who accept your invitation share their busy time on their city card: only busy blocks, never event titles.</p>
+      </details>
+      <details data-overplay-anchor="faq:q4" class="faq-item">
+        <summary><h3>Does it handle daylight saving time and public holidays?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Yes. Clock changes are applied automatically on both sides, so times stay correct when any city switches to or from daylight saving time. A HOLIDAY badge marks cities on a public holiday, with upcoming holidays for 240+ countries, including regional holidays in Germany, the US, Canada and Australia.</p>
+      </details>
+      <details data-overplay-anchor="faq:q5" class="faq-item">
+        <summary><h3>Is there a Mac app and widgets?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Yes. On Mac, GlobeTempus+ lives in the menu bar (macOS 27 or later on Apple silicon) and syncs your locations with iPhone and iPad via iCloud. On iPhone and iPad there are Home Screen and Lock Screen widgets for your world clocks, a single city, and the time difference between two cities.</p>
+      </details>
+      <details data-overplay-anchor="faq:q6" class="faq-item">
+        <summary><h3>How is it different from the built-in Clock app?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>The Clock app lists the current time in a few cities. GlobeTempus+ is built for planning: one timeline you can move through any day, working hours and holidays per location, your calendar next to every clock, shared busy time with people you invite, and alarms that ring at a time in another city.</p>
+      </details>
+      <details data-overplay-anchor="faq:q7" class="faq-item">
+        <summary><h3>Is GlobeTempus+ free?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>It is free to download and includes two locations, three people and one alarm. Upgrade monthly, yearly (with a one-week free trial) or with a one-time lifetime purchase to unlock unlimited locations, people and alarms, plus event details and event creation. One purchase covers iPhone, iPad and Mac.</p>
+      </details>
+      <details data-overplay-anchor="faq:q8" class="faq-item">
+        <summary><h3>Do I need an account? What happens to my data?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>No account and no sign-up. Your locations stay on your devices and sync through your own iCloud, your calendar never leaves your devices, and the clocks work offline.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section data-overplay-anchor="download" class="cta-section" id="download">
   <div data-overplay-anchor="download:card" class="cta-inner" data-animate>
@@ -1354,7 +1549,7 @@
     <span class="footer-contact-label">Contact us</span>
     <span class="footer-contact-email">support@carryapps.com</span>
   </a>
-  <p style="font-size:14px;"><a href="/privacy/" style="color:inherit;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;">Terms of Use</a></p>
+  <p style="font-size:14px;"><a href="/privacy/" style="color:inherit;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;">Terms of Use</a> &middot; <a href="#faq" style="color:inherit;">FAQ</a></p>
   <p>© 2026 GlobeTempus+. All rights reserved.</p>
   <p style="font-size:13px;color:rgba(255,255,255,0.4);">Made with ❤️ in Ukraine</p>
 </footer>
