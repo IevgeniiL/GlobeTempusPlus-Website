@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="How to find a meeting time across several time zones: add each location, set working hours, swipe one timeline with your calendar, and check public holidays. GlobeTempus+ for iPhone, iPad and Mac." />
+  <meta name="theme-color" content="#1C1C1E" />
+  <link rel="canonical" href="https://carryapps.com/meeting-planner/" />
+  <title>Plan Meetings Across Time Zones on iPhone, iPad &amp; Mac — GlobeTempus+</title>
+  <style>
+    :root{--accent:#FF5722;--accent-dim:rgba(255,87,34,.16);--bg:#1C1C1E;--bg-2:#202022;--bg-3:#26262A;--border:rgba(235,235,245,.08);--text:#fff;--muted:rgba(235,235,245,.62)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{color-scheme:dark;-webkit-text-size-adjust:100%}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-underline-offset:2px}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .bar{max-width:1040px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) 24px 20px;display:flex;justify-content:space-between;align-items:center}
+    .home{color:var(--text);text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.02em}
+    .home sup{color:var(--accent);font-size:.7em}
+    .get{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 18px;border-radius:999px}
+    main{max-width:1040px;margin:0 auto;padding:0 24px}
+    .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+    .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .intro{padding:64px 0 56px;max-width:720px}
+    h1{font-size:clamp(38px,6vw,64px);font-weight:800;line-height:1.04;letter-spacing:-.04em;margin-bottom:20px}
+    h1 em{font-style:normal;color:var(--accent)}
+    .lead{font-size:19px;line-height:1.65;color:var(--muted)}
+    .row{display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:center;padding:56px 0;border-top:1px solid var(--border)}
+    .row.flip{grid-template-columns:300px 1fr}.row.flip .copy{order:2}
+    .row.wide{grid-template-columns:1fr 1.1fr}
+    .num{display:inline-flex;width:36px;height:36px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent-dim);color:var(--accent);font-weight:800;margin-bottom:16px}
+    h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:14px}
+    h3{font-size:18px;letter-spacing:-.01em;margin-bottom:6px}
+    .copy p{color:var(--muted);font-size:17px}.copy p+p{margin-top:12px}
+    .shot img{width:100%;height:auto;display:block;border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05)}
+    .shot.bare img{border-radius:0;box-shadow:none;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:56px 0;border-top:1px solid var(--border)}
+    .cards>h2{grid-column:1/-1;margin-bottom:8px}
+    .card{background:var(--bg-3);border:1px solid var(--border);border-radius:20px;padding:24px}
+    .card p{color:var(--muted);font-size:15px}
+    .faq{padding:56px 0;border-top:1px solid var(--border)}
+    details{border-bottom:1px solid var(--border)}
+    summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+    details[open] summary::after{content:"\2212"}
+    details p{color:var(--muted);padding:0 0 20px;max-width:680px}
+    .cta{margin:24px 0 72px;padding:56px 32px;text-align:center;border:1px solid rgba(235,235,245,.09);border-radius:28px;background:radial-gradient(ellipse 75% 60% at 50% 0%,rgba(255,87,34,.10),transparent 65%),linear-gradient(180deg,#232327,#1D1D20)}
+    .cta p{color:var(--muted);max-width:520px;margin:0 auto 28px}
+    .cta img{height:52px;width:auto}
+    footer{max-width:1040px;margin:0 auto;padding:28px 24px max(40px,env(safe-area-inset-bottom));border-top:1px solid var(--border);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+    footer a{color:var(--muted)}
+    footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+    @media (max-width:760px){
+      .intro{padding:40px 0 36px}
+      .row,.row.flip,.row.wide{grid-template-columns:1fr;gap:28px;padding:44px 0}
+      .row.flip .copy{order:0}
+      .shot{max-width:300px;margin:0 auto;width:100%}.row.wide .shot{max-width:none}
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Plan Meetings Across Time Zones on iPhone, iPad & Mac — GlobeTempus+",
+  "description": "How to find a meeting time across several time zones: add each location, set working hours, swipe one timeline with your calendar, and check public holidays. GlobeTempus+ for iPhone, iPad and Mac.",
+  "url": "https://carryapps.com/meeting-planner/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "GlobeTempus+",
+    "operatingSystem": "iOS, iPadOS, macOS",
+    "applicationCategory": "UtilitiesApplication",
+    "installUrl": "https://apps.apple.com/app/id6813428126",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the easiest way to find a meeting time across three time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Put all three locations on one timeline with their working hours. In GlobeTempus+ you add each city once, set its working days and hours, then swipe the timeline: the hours where every card shows ACTIVE are your overlap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it account for daylight saving time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Clock changes are applied automatically for every city, so the overlap stays correct when one location switches to or from daylight saving time and another does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create the meeting from the app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your calendar events appear on the same timeline as the clocks, and you can create an event at the time you picked without leaving the app. Creating events is part of the full version."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<div class="bar"><a class="home" href="/">GlobeTempus<sup>+</sup></a><a class="get" href="https://apps.apple.com/app/id6813428126">Get the App</a></div>
+<main data-overplay-anchor="meeting-planner">
+  <header class="intro" data-overplay-anchor="meeting-planner:intro">
+    <div class="eyebrow">Guide</div>
+    <h1>Plan meetings across<br/><em>time zones.</em></h1>
+    <p class="lead">Finding a time that works in Berlin, New York and Singapore shouldn&rsquo;t take a spreadsheet. Here&rsquo;s how to do it in four steps with GlobeTempus+ on iPhone, iPad or Mac.</p>
+  </header>
+  <section class="row " data-overplay-anchor="meeting-planner:step-1">
+    <div class="copy"><span class="num">1</span><h2>Add the people and places you work with</h2><p>Add any city or town, then name it after a person, a team or an office: &ldquo;Kate&rdquo;, &ldquo;Brad&rsquo;s Team&rdquo;, &ldquo;Austin Office&rdquo;. Your own location is always at the top.</p></div>
+    <div class="shot "><img src="/images/screens/03-add-location.png" alt="Adding a location by searching for a city" loading="lazy" /></div>
+  </section>
+  <section class="row flip" data-overplay-anchor="meeting-planner:step-2">
+    <div class="copy"><span class="num">2</span><h2>Set their working hours once</h2><p>Pick working days and hours for each location. A live badge shows who is <strong>ACTIVE</strong> now or available <strong>SOON</strong>, so you see the overlap instead of calculating it.</p><p>Invite a colleague with People and you also see their busy time on their card &mdash; only busy blocks, never event titles.</p></div>
+    <div class="shot "><img src="/images/screens/05-availability.png" alt="Choosing working days and hours for a location" loading="lazy" /></div>
+  </section>
+  <section class="row " data-overplay-anchor="meeting-planner:step-3">
+    <div class="copy"><span class="num">3</span><h2>Swipe the timeline to find the slot</h2><p>Every clock moves together as you swipe through the day, with your calendar on the same timeline. When a time works for everyone, create the event right there.</p></div>
+    <div class="shot "><img src="/images/screens/07-calendar.png" alt="Calendar events on the timeline under the clocks" loading="lazy" /></div>
+  </section>
+  <section class="row flip" data-overplay-anchor="meeting-planner:step-4">
+    <div class="copy"><span class="num">4</span><h2>Check for public holidays</h2><p>A <strong>HOLIDAY</strong> badge marks any city on a public holiday, for 240+ countries, including regional holidays in Germany, the US, Canada and Australia. Schedule an event on someone&rsquo;s day off and the app asks first.</p></div>
+    <div class="shot "><img src="/images/screens/08-holiday.png" alt="Two US locations marked HOLIDAY while Berlin is at work" loading="lazy" /></div>
+  </section>
+
+  <section class="faq" data-overplay-anchor="meeting-planner:faq">
+    <h2>Questions</h2>
+    <details data-overplay-anchor="meeting-planner:faq-1"><summary>What is the easiest way to find a meeting time across three time zones?</summary><p>Put all three locations on one timeline with their working hours. In GlobeTempus+ you add each city once, set its working days and hours, then swipe the timeline: the hours where every card shows ACTIVE are your overlap.</p></details><details data-overplay-anchor="meeting-planner:faq-2"><summary>Does it account for daylight saving time?</summary><p>Yes. Clock changes are applied automatically for every city, so the overlap stays correct when one location switches to or from daylight saving time and another does not.</p></details><details data-overplay-anchor="meeting-planner:faq-3"><summary>Can I create the meeting from the app?</summary><p>Yes. Your calendar events appear on the same timeline as the clocks, and you can create an event at the time you picked without leaving the app. Creating events is part of the full version.</p></details>
+  </section>
+  <section class="cta" data-overplay-anchor="meeting-planner:download">
+    <h2>Stop doing the timezone math.</h2>
+    <p>Free to download with two locations, three people and one alarm. One purchase unlocks everything on iPhone, iPad and Mac.</p>
+    <a href="https://apps.apple.com/app/id6813428126" aria-label="Download GlobeTempus+ on the App Store"><img src="/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" width="156" height="52" /></a>
+  </section>
+</main>
+<footer data-overplay-anchor="meeting-planner:footer">
+  <nav aria-label="Guides"><a href="/world-time-buddy-alternative/">World Time Buddy alternative</a> <a href="/mac-menu-bar-world-clock/">World clock in the Mac menu bar</a> <a href="/#faq">FAQ</a></nav>
+  <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:support@carryapps.com">support@carryapps.com</a></span>
+</footer>
+<script src="https://overplay.app/widget.js"></script>
+<script>
+  Overplay.init({
+    serverUrl: 'https://overplay.app',
+    projectId: 'ab2b7363-c9a4-419c-ab72-155cb5295867'
+  });
+</script>
+</body>
+</html>

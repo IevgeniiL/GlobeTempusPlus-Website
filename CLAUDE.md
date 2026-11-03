@@ -36,7 +36,9 @@ and add/remove URLs from the `ASSETS` array.
 - `#features / .grid-section` — six cards for things without their own section (live clocks, illustrations, widgets, weather, city search, privacy). Don't repeat a feature callout here.
 - `#faq / .faq-section` — FAQ accordion; its JSON-LD `FAQPage` in `<head>` must match the visible text
 - `#download / .cta-section` — final CTA with App Store badge
-- `footer`
+- `footer` — also links the guide pages
+
+**Guide pages** (`/meeting-planner/`, `/world-time-buddy-alternative/`, `/mac-menu-bar-world-clock/`): standalone pages for specific search queries, each with its own inline CSS, `WebPage` + `FAQPage` JSON-LD matching the visible FAQ, the Overplay snippet, and links to each other. Keep facts in sync with the main page; on the comparison page describe only what GlobeTempus+ does, not claims about the other product. List new pages in `sitemap.xml`.
 
 **Design tokens** (CSS custom properties in `:root`):
 - `--accent: #FF5722` — orange-red primary accent (note: the user brief says `#FF4500` but the actual code uses `#FF5722`)

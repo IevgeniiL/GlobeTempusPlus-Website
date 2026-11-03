@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Show several time zones in the macOS menu bar with GlobeTempus+. One click opens a full world clock with working hours, holidays and your calendar, synced with iPhone and iPad via iCloud." />
+  <meta name="theme-color" content="#1C1C1E" />
+  <link rel="canonical" href="https://carryapps.com/mac-menu-bar-world-clock/" />
+  <title>World Clock in the Mac Menu Bar — GlobeTempus+ for Mac</title>
+  <style>
+    :root{--accent:#FF5722;--accent-dim:rgba(255,87,34,.16);--bg:#1C1C1E;--bg-2:#202022;--bg-3:#26262A;--border:rgba(235,235,245,.08);--text:#fff;--muted:rgba(235,235,245,.62)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{color-scheme:dark;-webkit-text-size-adjust:100%}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-underline-offset:2px}
+    a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+    .bar{max-width:1040px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) 24px 20px;display:flex;justify-content:space-between;align-items:center}
+    .home{color:var(--text);text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.02em}
+    .home sup{color:var(--accent);font-size:.7em}
+    .get{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 18px;border-radius:999px}
+    main{max-width:1040px;margin:0 auto;padding:0 24px}
+    .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+    .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+    .intro{padding:64px 0 56px;max-width:720px}
+    h1{font-size:clamp(38px,6vw,64px);font-weight:800;line-height:1.04;letter-spacing:-.04em;margin-bottom:20px}
+    h1 em{font-style:normal;color:var(--accent)}
+    .lead{font-size:19px;line-height:1.65;color:var(--muted)}
+    .row{display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:center;padding:56px 0;border-top:1px solid var(--border)}
+    .row.flip{grid-template-columns:300px 1fr}.row.flip .copy{order:2}
+    .row.wide{grid-template-columns:1fr 1.1fr}
+    .num{display:inline-flex;width:36px;height:36px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent-dim);color:var(--accent);font-weight:800;margin-bottom:16px}
+    h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:14px}
+    h3{font-size:18px;letter-spacing:-.01em;margin-bottom:6px}
+    .copy p{color:var(--muted);font-size:17px}.copy p+p{margin-top:12px}
+    .shot img{width:100%;height:auto;display:block;border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.05)}
+    .shot.bare img{border-radius:0;box-shadow:none;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55))}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:56px 0;border-top:1px solid var(--border)}
+    .cards>h2{grid-column:1/-1;margin-bottom:8px}
+    .card{background:var(--bg-3);border:1px solid var(--border);border-radius:20px;padding:24px}
+    .card p{color:var(--muted);font-size:15px}
+    .faq{padding:56px 0;border-top:1px solid var(--border)}
+    details{border-bottom:1px solid var(--border)}
+    summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+    details[open] summary::after{content:"\2212"}
+    details p{color:var(--muted);padding:0 0 20px;max-width:680px}
+    .cta{margin:24px 0 72px;padding:56px 32px;text-align:center;border:1px solid rgba(235,235,245,.09);border-radius:28px;background:radial-gradient(ellipse 75% 60% at 50% 0%,rgba(255,87,34,.10),transparent 65%),linear-gradient(180deg,#232327,#1D1D20)}
+    .cta p{color:var(--muted);max-width:520px;margin:0 auto 28px}
+    .cta img{height:52px;width:auto}
+    footer{max-width:1040px;margin:0 auto;padding:28px 24px max(40px,env(safe-area-inset-bottom));border-top:1px solid var(--border);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+    footer a{color:var(--muted)}
+    footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+    @media (max-width:760px){
+      .intro{padding:40px 0 36px}
+      .row,.row.flip,.row.wide{grid-template-columns:1fr;gap:28px;padding:44px 0}
+      .row.flip .copy{order:0}
+      .shot{max-width:300px;margin:0 auto;width:100%}.row.wide .shot{max-width:none}
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "World Clock in the Mac Menu Bar — GlobeTempus+ for Mac",
+  "description": "Show several time zones in the macOS menu bar with GlobeTempus+. One click opens a full world clock with working hours, holidays and your calendar, synced with iPhone and iPad via iCloud.",
+  "url": "https://carryapps.com/mac-menu-bar-world-clock/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "GlobeTempus+",
+    "operatingSystem": "iOS, iPadOS, macOS",
+    "applicationCategory": "UtilitiesApplication",
+    "installUrl": "https://apps.apple.com/app/id6813428126",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I show multiple time zones in the Mac menu bar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install GlobeTempus+ from the App Store, add the cities you need, and choose which of them appear in the menu bar. Clicking the menu bar item opens the full world clock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mac app needs macOS 27 or later on a Mac with Apple silicon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my cities sync with my iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your locations sync between Mac, iPhone and iPad through your own iCloud account, with no sign-up."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<div class="bar"><a class="home" href="/">GlobeTempus<sup>+</sup></a><a class="get" href="https://apps.apple.com/app/id6813428126">Get the App</a></div>
+<main data-overplay-anchor="mac-menu-bar-world-clock">
+  <header class="intro" data-overplay-anchor="mac-menu-bar-world-clock:intro">
+    <div class="eyebrow">Mac</div>
+    <h1>A world clock in your<br/><em>Mac menu bar.</em></h1>
+    <p class="lead">See what time it is for your team without leaving what you&rsquo;re doing. GlobeTempus+ for Mac lives next to your clock and syncs with your iPhone and iPad.</p>
+  </header>
+  <section class="row wide" data-overplay-anchor="mac-menu-bar-world-clock:menu-bar">
+    <div class="copy"><h2>Your cities next to your clock</h2><p>Keep the time of the people you work with right in the macOS menu bar. One click opens the full world clock with the same city cards, timeline and calendar as on iPhone.</p></div>
+    <div class="shot bare"><img src="/images/mac/menu-bar.png" alt="GlobeTempus+ for Mac: the menu bar shows Brad&#x27;s Team 04:00 above the world clock window" loading="lazy" /></div>
+  </section>
+  <section class="cards" data-overplay-anchor="mac-menu-bar-world-clock:features">
+    <h2>What&rsquo;s in the Mac app</h2>
+    <div class="card"><h3>Times in the menu bar</h3><p>Pick the locations you want to see without opening anything.</p></div>
+    <div class="card"><h3>Full world clock on click</h3><p>City cards, working hours, holidays and the timeline in a window under the menu bar.</p></div>
+    <div class="card"><h3>Synced with iPhone and iPad</h3><p>Your locations come along through your own iCloud. No account.</p></div>
+    <div class="card"><h3>One purchase, every device</h3><p>The full version unlocks on iPhone, iPad and Mac together.</p></div>
+  </section>
+
+  <section class="faq" data-overplay-anchor="mac-menu-bar-world-clock:faq">
+    <h2>Questions</h2>
+    <details data-overplay-anchor="mac-menu-bar-world-clock:faq-1"><summary>How do I show multiple time zones in the Mac menu bar?</summary><p>Install GlobeTempus+ from the App Store, add the cities you need, and choose which of them appear in the menu bar. Clicking the menu bar item opens the full world clock.</p></details><details data-overplay-anchor="mac-menu-bar-world-clock:faq-2"><summary>What are the requirements?</summary><p>The Mac app needs macOS 27 or later on a Mac with Apple silicon.</p></details><details data-overplay-anchor="mac-menu-bar-world-clock:faq-3"><summary>Do my cities sync with my iPhone?</summary><p>Yes. Your locations sync between Mac, iPhone and iPad through your own iCloud account, with no sign-up.</p></details>
+  </section>
+  <section class="cta" data-overplay-anchor="mac-menu-bar-world-clock:download">
+    <h2>Stop doing the timezone math.</h2>
+    <p>Free to download with two locations, three people and one alarm. One purchase unlocks everything on iPhone, iPad and Mac.</p>
+    <a href="https://apps.apple.com/app/id6813428126" aria-label="Download GlobeTempus+ on the App Store"><img src="/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" width="156" height="52" /></a>
+  </section>
+</main>
+<footer data-overplay-anchor="mac-menu-bar-world-clock:footer">
+  <nav aria-label="Guides"><a href="/meeting-planner/">Plan meetings across time zones</a> <a href="/world-time-buddy-alternative/">World Time Buddy alternative</a> <a href="/#faq">FAQ</a></nav>
+  <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:support@carryapps.com">support@carryapps.com</a></span>
+</footer>
+<script src="https://overplay.app/widget.js"></script>
+<script>
+  Overplay.init({
+    serverUrl: 'https://overplay.app',
+    projectId: 'ab2b7363-c9a4-419c-ab72-155cb5295867'
+  });
+</script>
+</body>
+</html>
