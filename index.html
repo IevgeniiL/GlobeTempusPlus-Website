@@ -754,7 +754,10 @@
         display: flex;
         justify-content: center;
       }
-      .feature-visual img { width: min(304px, 100%); margin: 0; }
+      /* .wide sets a 520px flex-basis for desktop rows; in the column
+         layout that basis becomes a 520px height and stretches the image. */
+      .feature-visual.wide { flex: 0 0 auto; }
+      .feature-visual img { width: min(304px, 100%); height: auto; margin: 0; align-self: flex-start; }
       .feature-visual.wide img { width: min(560px, 100%); }
       .grid-section { padding: 72px var(--section-pad-x); }
       .features-grid { grid-template-columns: 1fr; }
