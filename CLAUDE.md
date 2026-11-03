@@ -29,14 +29,12 @@ and add/remove URLs from the `ASSETS` array.
 **Single-file layout** — all HTML, CSS, and JS live in `index.html`. There are no external stylesheets, frameworks, or JS libraries. The service worker (`sw.js`) is a separate file and caches the key assets listed in `ASSETS`.
 
 **Page sections** (in order):
-- `nav` — fixed, blurred backdrop, App Store badge link
+- `nav` — fixed, blurred backdrop: Features (`#availability`), Mac, FAQ, App Store badge
 - `#top / .hero` — animated gradient background, headline, hero phone image
-- `#screens / .showcase` — horizontal scrolling app screenshot carousel
-- `#mac` — "Now on Mac" feature callout (`images/mac/menu-bar.png`, made from the iOS repo's Mac window capture)
-- `#availability` — "Available now" feature callout
-- Feature callouts (time picker, edit list) — full-bleed alternating layout sections
-- `#features / .grid-section` — feature grid cards
-- `.how-section` — "How it works" steps
+- `#screens / .showcase` — app screenshot row
+- Feature callouts, full-bleed, alternating background and image side, core value first: `#availability`, `#calendar`, `#holidays`, `#people`, `#alarms`, `#mac`, `#duo`. Only the newest feature carries a "New ·" eyebrow.
+- `#features / .grid-section` — six cards for things without their own section (live clocks, illustrations, widgets, weather, city search, privacy). Don't repeat a feature callout here.
+- `#faq / .faq-section` — FAQ accordion; its JSON-LD `FAQPage` in `<head>` must match the visible text
 - `#download / .cta-section` — final CTA with App Store badge
 - `footer`
 
